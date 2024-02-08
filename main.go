@@ -1,9 +1,15 @@
 package main
 
 import (
-
 	"github.com/gin-gonic/gin"
+	"github.com/jicodes/go-jwt/initializers"
 )
+
+func init () {
+	initializers.LoadEnvVariables()
+	initializers.ConnectDB()
+	initializers.SyncDB()
+}
 
 func main() {
 	r := gin.Default()
@@ -12,6 +18,6 @@ func main() {
 			"message": "hello world",
 		})
 	})
-	r.Run(":4242")
+	r.Run()
 
 }
