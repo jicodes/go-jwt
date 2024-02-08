@@ -6,10 +6,10 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/golang-jwt/jwt/v4"
 	"github.com/jicodes/go-jwt/initializers"
 	"github.com/jicodes/go-jwt/models"
 	"golang.org/x/crypto/bcrypt"
-	"github.com/golang-jwt/jwt/v4"
 )
 
 func Signup(c *gin.Context) {
@@ -101,5 +101,16 @@ func Login(c *gin.Context) {
 
 	// send it back to the client in the response 
 	c.JSON(http.StatusOK, gin.H{"token": tokenString}) //200
+}
 
+func Validate(c *gin.Context) {
+	// Get the user from the context
+	user, _ := c.Get("user")
+
+	// Get the user's email
+	// user.(models.User).Email
+
+	c.JSON(http.StatusOK, gin.H{  //200
+		"logged in user" : user,
+	})
 }
