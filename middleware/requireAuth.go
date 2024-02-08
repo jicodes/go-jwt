@@ -12,7 +12,7 @@ import (
 	"github.com/jicodes/go-jwt/models"
 )
 
-func RequireAuthz(c *gin.Context) {
+func RequireAuth(c *gin.Context) {
 	// Get the token from the cookie named "Authorization of the request
 	tokenString, err := c.Cookie("Authorization")
 	if err != nil {
