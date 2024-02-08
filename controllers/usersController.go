@@ -43,8 +43,8 @@ func Signup(c *gin.Context) {
 		})
 		return
 	}
-	// Return OK
-	c.JSON(http.StatusOK, gin.H{}) //200
+	// Return a 201 status code 
+	c.JSON(http.StatusCreated, gin.H{}) //201
 }
 
 func Login(c *gin.Context) {
