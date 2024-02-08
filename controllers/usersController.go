@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/golang-jwt/jwt/v4"
+	"github.com/golang-jwt/jwt/v5"
 	"github.com/jicodes/go-jwt/initializers"
 	"github.com/jicodes/go-jwt/models"
 	"golang.org/x/crypto/bcrypt"

@@ -16,7 +16,7 @@ go get -u gorm.io/driver/postgres
 go get -u golang.org/x/crypto/bcrypt
 
 # for JWT
-go get -u github.com/golang-jwt/jwt/v4
+go get -u github.com/golang-jwt/jwt/v5
 
 # TODO: for hot reloading
 # go get github.com/githubnemo/CompileDaemon
